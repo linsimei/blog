@@ -22,8 +22,8 @@ router.get('/logout', function (req, res) {
 });
 
 
-router.get('/user',auth, function (req, res) {
-  res.redirect('/html/user.html');
+router.get('/user', function (req, res) {
+  res.json(req.user);
 });
 
 
