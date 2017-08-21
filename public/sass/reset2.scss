@@ -1,0 +1,27 @@
+// 适配dpr的字体大小
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+
+  [data-dpr="2"] & {
+      font-size: $font-size * 2;
+  }
+
+  [data-dpr="3"] & {
+      font-size: $font-size * 3;
+  }
+}
+@mixin px-dpr($property, $px) {
+  #{$property}: $px;
+
+  [data-dpr="2"] & {
+    #{$property}: $px * 2;
+  }
+
+  [data-dpr="3"] & {
+    #{$property}: $px * 3;
+  }
+}
+
+// 使用
+@include font-dpr(14px);
+@include px-dpr(width, 40px); @include px-dpr(height, 40px);

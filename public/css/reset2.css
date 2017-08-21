@@ -1,20 +1,22 @@
 /*
 Error: Base-level rules cannot contain the parent-selector-referencing character '&'.
-        on line 5 of public/sass/reset.sass, in `font-dpr'
-        from line 6 of public/sass/common.sass
+        on line 5 of public/sass/reset2.scss, in `font-dpr'
+        from line 26 of public/sass/reset2.scss
 
-1: @import "reset"
-2:   
-3: 
+1: // 适配dpr的字体大小
+2: @mixin font-dpr($font-size){
+3:   font-size: $font-size;
 4: 
-5: // 使用
-6: @include font-dpr(14px)
-7: @include px-dpr(width, 40px)
-8: @include px-dpr(height, 40px)
+5:   [data-dpr="2"] & {
+6:       font-size: $font-size * 2;
+7:   }
+8: 
+9:   [data-dpr="3"] & {
+10:       font-size: $font-size * 3;
 
 Backtrace:
-public/sass/reset.sass:5:in `font-dpr'
-public/sass/common.sass:6
+public/sass/reset2.scss:5:in `font-dpr'
+public/sass/reset2.scss:26
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/selector/comma_sequence.rb:31:in `resolve_parent_refs'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:439:in `visit_rule'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -66,4 +68,4 @@ C:/Ruby24-x64/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Base-level rules cannot contain the parent-selector-referencing character '&'.\A         on line 5 of public/sass/reset.sass, in `font-dpr'\A         from line 6 of public/sass/common.sass\A \A 1: @import \"reset\"\A 2:   \A 3: \A 4: \A 5: // 使用\A 6: @include font-dpr(14px)\A 7: @include px-dpr(width, 40px)\A 8: @include px-dpr(height, 40px)"; }
+  content: "Error: Base-level rules cannot contain the parent-selector-referencing character '&'.\A         on line 5 of public/sass/reset2.scss, in `font-dpr'\A         from line 26 of public/sass/reset2.scss\A \A 1: // 适配dpr的字体大小\A 2: @mixin font-dpr($font-size){\A 3:   font-size: $font-size;\A 4: \A 5:   [data-dpr=\"2\"] & {\A 6:       font-size: $font-size * 2;\A 7:   }\A 8: \A 9:   [data-dpr=\"3\"] & {\A 10:       font-size: $font-size * 3;"; }
