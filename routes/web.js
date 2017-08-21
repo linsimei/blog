@@ -20,13 +20,13 @@ router.get("/:id",auth, function (req, res, next) {
 
 })
 
-router.delete("/:id", function (req, res, next) {
+router.delete("/:id",auth, function (req, res, next) {
     webs.remove({ _id: req.params.id }, function (err) {
         res.json(true);
     });
 });
 
-router.post("/add", function (req, res, next) {
+router.post("/add",auth, function (req, res, next) {
     var title = req.body.title;
     var content = req.body.content;
     var new_web = new webs({ title: title, content: content, createDate: new Date() });
@@ -34,6 +34,22 @@ router.post("/add", function (req, res, next) {
         if (err) return console.error(err);
         res.json(new_web);
     });
+})
+
+
+router.post("/edit",auth, function (req, res, next) {
+    var id = req.body.id;
+    var title = req.body.title;
+    var content = req.body.content;
+
+    webs.findOne({ _id: id }, function(err, saveitem) {
+        saveitem.title = title;
+        saveitem.content = content;
+        saveitem.save(function(err, saveitem) {
+            console.log(saveitem);
+            res.json(saveitem);
+        })
+    })
 })
 
 

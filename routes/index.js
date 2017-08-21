@@ -1,37 +1,30 @@
 var express = require('express');
 var passport = require('passport');
 var router = express.Router();
+var auth = require("../middlewares/auth");
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect("/html/index.html")
+});
+
+router.get('/login', function (req, res) {
+  res.redirect("/html/login.html");
+});
+
+router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), function (req, res) {
+  res.redirect('/html/user.html');
+});
+
+router.get('/logout', function (req, res) {
+  req.logout();
+  res.redirect('/');
 });
 
 
-
-router.get('/login',
-  function (req, res) {
-    res.render('login');
-  });
-
-router.post('/login',
-  passport.authenticate('local', { failureRedirect: '/login' }),
-  function (req, res) {
-    res.redirect('/');
-  });
-
-router.get('/logout',
-  function (req, res) {
-    req.logout();
-    res.redirect('/');
-  });
-
-router.get('/profile',
-  require('connect-ensure-login').ensureLoggedIn(),
-  function (req, res) {
-    res.render('profile', { user: req.user });
-  });
-
+router.get('/user', function (req, res) {
+  res.json(req.user);
+});
 
 
 module.exports = router;
