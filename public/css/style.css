@@ -1,8 +1,78 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*PAGE STRUCTURE
+----------------------------------------------- */
+
+header {
+  width: 100%;
+  padding: 20px;
 }
 
-a {
-  color: #00B7FF;
+
+/*login*/
+
+form {
+  margin: 280px auto;
+  width: 350px;
+  height: 270px;
+  border: 1px solid #949599;
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+form h2 {
+  letter-spacing: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+form input {
+  margin: 10px 0;
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+}
+
+form .button {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background: #949599;
+  font-size: 16px;
+}
+
+form div {
+  width: 260px margin： auto;
+  height: 25px;
+  padding: 0 10px;
+}
+
+form .get_password,
+form .back_home {
+  color: #fff;
+}
+
+
+/*home page*/
+
+header {
+  width: 100%;
+  margin: 0 auto;
+}
+header nav li{
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+header nav li  a{
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-weight:700;
+  font-size: 20px;
+}
+header nav li a.current{
+  background: #000;
+  color:#fff;
 }

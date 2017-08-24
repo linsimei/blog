@@ -1,0 +1,283 @@
+/* RESET STYLES */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-style: normal;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+img {
+  border: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+
+/* HTML5 RESETS FOR OLDER BROWSERS */
+
+article,
+aside,
+figure,
+figure img,
+hgroup,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+
+/* GENERAL STYLES
+----------------------------------------------- */
+
+html {
+  font:"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  text-shadow: #000 0px 0px 0px;
+  color: #333;
+}
+
+body {
+  font-size:14px;
+  width: 100%;
+  height: 100%;
+  color: #949599;
+  background:url(../images/Background.png) repeat;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding:20px 100px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #000;
+}
+
+h3 {
+  font-size: 1.6em;
+  color: #000;
+}
+
+h4 {
+  font-size: 1.4em;
+  color: #000;
+}
+
+h5 {
+  font-size: 1.2em;
+  color: #000;
+}
+
+h6 {
+  font-size: 1em;
+  color: #000;
+}
+
+.hide {
+  display: none;
+}
+.float_left{
+  float: left;
+}
+.float_right{
+  float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+a,
+a:link,
+a:visited {
+  color: #000;
+}
+
+a:hover,
+a:focus {
+  color: #fff;
+  background: #000;
+}
+
+header a {
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.mainbody p a {
+  border-bottom: 1px dashed #949599;
+}
+
+.mainbody p a:hover {
+  background: #949599;
+}
+
+
+/* BUTTONS */
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  background: #000;
+  border-radius: 5px;
+  border: 1px solid #000;
+  color: #fff;
+    /* -webkit-box-shadow: 1px 1px 2px #F5F5F5;
+	   -moz-box-shadow: 1px 1px 2px #F5F5F5;
+	        box-shadow: 1px 1px 2px #F5F5F5;
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease; */
+}
+
+.button:hover {
+  font-weight: 700;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  height: 1px
+}
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+

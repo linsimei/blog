@@ -9,24 +9,29 @@
     <meta name="format-detection" content="telephone=yes" />
     <meta name="msapplication-tap-highlight" content="no" />
     <title>博客首页</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <input type="text" class="search_bar" />
-            <nav>
+        <header class="clearfix">
+            <nav class="head_left float_left">
                 <ul>
-                    <li><a href="#">首页</a></li>
+                    <li><a  class="current"  href="#">首页</a></li>
                     <li><a href="#">博客</a></li>
-                    <li><a href="#">个人中心</a></li>   
+                    <li><a href="#">个人中心</a></li>
                 </ul>
             </nav>
-            <a href="/html/login.html">登录</a>
-            <a href="/html/user.html">林思梅</a>
+            <div class="head_right float_right">
+                <input type="text" class="search_bar"/>
+                <!-- <a href="/html/login.html">登录</a>
+                <a href="/html/user.html">林思梅</a> -->
+            </div>
+
         </header>
-        
-       
+
+
     </div>
 </body>
 
