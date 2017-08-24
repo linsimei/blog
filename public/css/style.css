@@ -83,12 +83,14 @@ header nav li a.current{
   background: #fff;
   border-radius: 10px;
   margin: 20px auto;
+  border: 2px solid #e0e0e0;
 }
 .main_wrapper .banner{
 height: 90px;
 line-height: 90px;
 text-align: center;
 font-size: 18px;
+border-bottom:  2px solid #e0e0e0;
 }
 
 
