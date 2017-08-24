@@ -9,7 +9,7 @@ header {
 
 /*login*/
 
-form {
+.login {
   margin: 280px auto;
   width: 350px;
   height: 270px;
@@ -20,20 +20,20 @@ form {
   color: #fff;
 }
 
-form h2 {
+.login h2 {
   letter-spacing: 20px;
   font-weight: 700;
   color: #fff;
 }
 
-form input {
+.login input {
   margin: 10px 0;
   width: 300px;
   height: 30px;
   line-height: 30px;
 }
 
-form .button {
+.login .button {
   display: table;
   margin-left: auto;
   margin-right: auto;
@@ -42,22 +42,22 @@ form .button {
   font-size: 16px;
 }
 
-form div {
+.login div {
   width: 260px margin： auto;
   height: 25px;
   padding: 0 10px;
 }
 
-form .get_password,
-form .back_home {
+.login .get_password,
+.login .back_home {
   color: #fff;
 }
 
 
 /*home page*/
-
+/*header*/
 header {
-  width: 100%;
+  min-width: 100%;
   margin: 0 auto;
 }
 header nav li{
@@ -76,3 +76,19 @@ header nav li a.current{
   background: #000;
   color:#fff;
 }
+
+/*main content*/
+.main_wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.main_wrapper .banner{
+height: 90px;
+line-height: 90px;
+text-align: center;
+font-size: 18px;
+}
+
+
