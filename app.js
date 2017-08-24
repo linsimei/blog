@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
+var flash = require('connect-flash');
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/blogdb', { useMongoClient: true });
@@ -16,12 +17,13 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var web = require('./routes/web');
 
+
 passport.use(new Strategy(
   function (username, password, cb) {
     db.users.findByUsername(username, function (err, user) {
       if (err) { return cb(err); }
-      if (!user) { return cb(null, false); }
-      if (user.password != password) { return cb(null, false); }
+      if (!user) { return cb(null, false,{message: '没有这个账户'}); }
+      if (user.password != password) { return cb(null, false,{message: '密码不正确'}); }
       return cb(null, user);
     });
   }));
@@ -38,7 +40,7 @@ passport.deserializeUser(function (id, cb) {
 });
 
 var app = express();
-
+app.use(flash());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
