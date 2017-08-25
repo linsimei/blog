@@ -157,10 +157,10 @@ body {
 
 .container {
   position: relative;
-  width: 100%;
+  width: 1350px;
   height: 100%;
   margin: 0 auto;
-  padding:20px 300px;
+  padding:15px;
 }
 
 h1 {
@@ -279,5 +279,13 @@ object,
 video {
   max-width: 100%;
 }
-
+.blog_list p{
+  text-indent: 2em;
+}
+i{
+  display: inline-block;
+}
+.inline{
+  display: inline-block;
+}
 
