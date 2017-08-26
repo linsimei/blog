@@ -36,5 +36,9 @@ router.get('/user', function (req, res) {
   res.json(req.user);
 });
 
+router.get('/manage', function (req, res) {
+  res.redirect('/html/manage.html');
+});
+
 
 module.exports = router;

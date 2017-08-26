@@ -242,9 +242,9 @@ header a {
 .button {
   display: block;
   padding: 10px 20px;
-  background: #000;
+  background: #949599;
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1px solid #949599;
   color: #fff;
     /* -webkit-box-shadow: 1px 1px 2px #F5F5F5;
 	   -moz-box-shadow: 1px 1px 2px #F5F5F5;
@@ -257,6 +257,8 @@ header a {
 
 .button:hover {
   font-weight: 700;
+  border: 1px solid #000;
+  background: #000;
 }
 
 hr {
@@ -269,7 +271,7 @@ hr {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 100%;
   display: block;
 }
