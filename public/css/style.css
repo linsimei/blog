@@ -281,13 +281,12 @@ header nav li a.current {
 /* blog manage*/
 
 .manage {
-  width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .manage .button {
   border: 1px solid #949599;
-  width: 100px;
+  width: 60px;
   background: #949599;
   color: #fff;
   text-align: center;
@@ -298,14 +297,31 @@ header nav li a.current {
 }
 
 .manage .list_manage {
-  margin: 100px;
+  text-align: center;
+  margin: 50px 0 80px 0;
 }
-
+.manage .list_manage h4{
+  margin-bottom: 30px;
+}
 .manage .list_manage .manage_wrapper {
-  margin: 100px;
-  margin-bottom: 50px;
+  width: 30%;
+border-top:2px solid #e0e0e0;
+  margin: 0 auto;
+  padding-top: 10px;
 }
+.manage .list_manage .manage_wrapper:last-of-type {
+border-bottom:2px solid #e0e0e0; 
 
+}
 .manage .list_manage .manage_title {
-  margin-top: 50px;
+  font-size: 18px;
+  color: #000;
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  
+}
+.manage .list_manage .manage_items a{
+ margin-left: 5px ;
+ border-radius: 5px;
 }
