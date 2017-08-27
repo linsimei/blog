@@ -27,7 +27,7 @@ $(function(){
          var formdata  = $("#form").serialize();
          $.post("/web/add",formdata,function(data){
              alert("发表成功");
-             
+             window.location.href = "/manage";
          })
 
     });
