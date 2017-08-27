@@ -8,5 +8,8 @@ module.exports = function (req, res, next) {
         return next();
 
     // IF A USER ISN'T LOGGED IN, THEN REDIRECT THEM SOMEWHERE
-    res.send("no auth");
+    if(req.xhr){
+        res.json("no auth");
+    }
+    res.redirect('/login');
 }

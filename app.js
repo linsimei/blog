@@ -8,6 +8,7 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var flash = require('connect-flash');
 var mongoose = require('mongoose');
+var fileUpload = require('express-fileupload');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/blogdb', { useMongoClient: true });
 
@@ -51,7 +52,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
-
+app.use(fileUpload());
 app.use(passport.initialize());
 app.use(passport.session());
 
