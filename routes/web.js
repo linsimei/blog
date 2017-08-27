@@ -20,7 +20,7 @@ router.get("/item/:id", auth, function (req, res, next) {
 
 })
 
-router.delete("/:id", auth, function (req, res, next) {
+router.delete("/item/:id", auth, function (req, res, next) {
     webs.remove({ _id: req.params.id }, function (err) {
         res.json(true);
     });
