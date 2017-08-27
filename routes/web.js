@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 
 });
 
-router.get("/:id",auth, function (req, res, next) {
+router.get("/item/:id",auth, function (req, res, next) {
     var id = req.params.id;
     webs.findById(id, function (err, item) {
         res.json(item);
@@ -27,7 +27,7 @@ router.delete("/:id",auth, function (req, res, next) {
 });
 
 router.get("/create",function(req, res, next){
-    res.redirect("/");
+    res.redirect("/html/web/create.html");
 })
 
 router.post("/add",auth, function (req, res, next) {
