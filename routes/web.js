@@ -26,8 +26,8 @@ router.delete("/:id",auth, function (req, res, next) {
     });
 });
 
-router.get("/web/create",function(req, res, next){
-    res.redirect("/html/web/create.html");
+router.get("/create",function(req, res, next){
+    res.redirect("/");
 })
 
 router.post("/add",auth, function (req, res, next) {
