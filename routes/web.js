@@ -33,6 +33,7 @@ router.get("/create",function(req, res, next){
 router.post("/add",auth, function (req, res, next) {
     var title = req.body.title;
     var content = req.body.content;
+    var cover = req.body.cover;
     var new_web = new webs({ title: title, content: content, createDate: new Date() });
     new_web.save(function (err, new_web) {
         if (err) return console.error(err);
