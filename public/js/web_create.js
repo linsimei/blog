@@ -32,5 +32,15 @@ $(function(){
 
     });
 
+    //wangEditor
+    var E = window.wangEditor;
+    var editor = new E('#wangeditor')
+    editor.customConfig.onchange = function (html) {
+        // html 即变化之后的内容
+        $("#content").val(html);
+    }
+    // 或者 var editor = new E( document.getElementById('#editor') )
+    editor.create()
+
 
 })

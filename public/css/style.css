@@ -303,13 +303,13 @@ header nav li a.current {
 .manage .list_manage h4{
   margin-bottom: 30px;
 }
-.manage .list_manage .manage_wrapper {
+.manage .list_manage .manage_blog {
   width: 30%;
 border-top:2px solid #e0e0e0;
   margin: 0 auto;
   padding-top: 10px;
 }
-.manage .list_manage .manage_wrapper:last-of-type {
+.manage .list_manage .manage_blog:last-of-type {
 border-bottom:2px solid #e0e0e0; 
 
 }
