@@ -8,6 +8,7 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var flash = require('connect-flash');
 var mongoose = require('mongoose');
+var fileUpload = require('express-fileupload');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/blogdb', { useMongoClient: true });
 
@@ -16,6 +17,7 @@ var db = require('./db');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var web = require('./routes/web');
+var files = require('./routes/files');
 
 
 passport.use(new Strategy(
@@ -51,7 +53,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
-
+app.use(fileUpload());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -60,6 +62,7 @@ app.use(passport.session());
 app.use('/', index);
 app.use('/users', users);
 app.use("/web", web);
+app.use('/files', files);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
