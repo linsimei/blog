@@ -20,7 +20,7 @@ router.get("/item/:id", auth, function (req, res, next) {
 
 })
 
-router.delete("/item/:id", auth, function (req, res, next) {
+router.get("/delete/:id", auth, function (req, res, next) {
     webs.remove({ _id: req.params.id }, function (err) {
         res.json(true);
     });
@@ -29,6 +29,12 @@ router.delete("/item/:id", auth, function (req, res, next) {
 router.get("/create", function (req, res, next) {
     res.redirect("/html/web/create.html");
 })
+
+router.get("/edit/:id", function (req, res, next) {
+    res.redirect("/html/web/edit.html?id="+req.params.id);
+})
+
+
 
 router.post("/add", auth, function (req, res, next) {
     var title = req.body.title;
@@ -46,10 +52,12 @@ router.post("/edit", auth, function (req, res, next) {
     var id = req.body.id;
     var title = req.body.title;
     var content = req.body.content;
+    var cover = req.body.cover;
 
     webs.findOne({ _id: id }, function (err, saveitem) {
         saveitem.title = title;
         saveitem.content = content;
+        saveitem.cover =cover;
         saveitem.save(function (err, saveitem) {
             console.log(saveitem);
             res.json(saveitem);
