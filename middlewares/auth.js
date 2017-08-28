@@ -9,7 +9,11 @@ module.exports = function (req, res, next) {
 
     // IF A USER ISN'T LOGGED IN, THEN REDIRECT THEM SOMEWHERE
     if(req.xhr){
+        res.statusCode  = 403;
         res.json("no auth");
     }
-    res.redirect('/login');
+    else{
+        res.redirect('/login');
+    }
+    
 }

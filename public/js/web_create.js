@@ -21,12 +21,11 @@ $(function(){
         });
     })
 
-
+//ajax表单提交
     $("#submit").click(function(){
-
-         var formdata  = $("#form").serialize();
+         var formdata  = $("#create_form").serialize();
          $.post("/web/add",formdata,function(data){
-             alert("发表成功");
+             alert("发表成功！");
              window.location.href = "/manage";
          })
 

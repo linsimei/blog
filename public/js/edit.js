@@ -24,7 +24,7 @@ $(function () {
 
     $("#submit").click(function () {
 
-        var formdata = $("#form").serialize();
+        var formdata = $("#create_form").serialize();
         $.post("/web/edit", formdata, function (data) {
             alert("修改成功！");
             window.location.href = "/manage";

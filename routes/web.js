@@ -26,11 +26,11 @@ router.get("/delete/:id", auth, function (req, res, next) {
     });
 });
 
-router.get("/create", function (req, res, next) {
+router.get("/create",auth, function (req, res, next) {
     res.redirect("/html/web/create.html");
 })
 
-router.get("/edit/:id", function (req, res, next) {
+router.get("/edit/:id",auth, function (req, res, next) {
     res.redirect("/html/web/edit.html?id="+req.params.id);
 })
 

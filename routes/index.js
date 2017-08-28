@@ -26,17 +26,17 @@ router.post('/login',
   }
 );
 
-router.get('/logout', function (req, res) {
+router.get('/logout',auth, function (req, res) {
   req.logout();
   res.redirect('/');
 });
 
 
-router.get('/user', function (req, res) {
+router.get('/user',auth, function (req, res) {
   res.json(req.user);
 });
 
-router.get('/manage', function (req, res) {
+router.get('/manage',auth, function (req, res) {
   res.redirect('/html/manage.html');
 });
 
