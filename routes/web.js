@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get("/details",function(req, res, next){
-    res.redirect("/html/web/details.html");
+    res.redirect("/html/web/details.html?id="+req.query.id);
 })
 
 router.get("/item/:id", auth, function (req, res, next) {
