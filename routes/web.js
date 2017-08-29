@@ -9,15 +9,17 @@ router.get('/', function (req, res, next) {
     webs.find({}, function (err, webs) {
         res.json(webs);
     });
-
 });
+
+router.get("/details",function(req, res, next){
+    res.redirect("/html/web/details.html");
+})
 
 router.get("/item/:id", auth, function (req, res, next) {
     var id = req.params.id;
     webs.findById(id, function (err, item) {
         res.json(item);
     });
-
 })
 
 router.get("/delete/:id", auth, function (req, res, next) {
