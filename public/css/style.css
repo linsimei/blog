@@ -415,6 +415,8 @@ header nav li a.current {
 }
 /*blog content*/
 #content_wrraper{
+  width: 100%;
   border: 2px solid #949599;
   background: #fff;
+  border-radius: 10px;
 }
