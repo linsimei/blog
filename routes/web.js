@@ -12,7 +12,24 @@ router.get('/', function (req, res, next) {
 });
 
 router.get("/details",function(req, res, next){
-    res.redirect("/html/web/details.html?id="+req.query.id);
+    var id = req.query.id;
+    webs.findById(id, function (err, item) {
+        item.visit++;
+        item.save(function (err, saveitem) {
+            //添加访问次数
+            res.redirect("/html/web/details.html?id="+req.query.id);
+        })
+    });
+})
+
+router.get("/recommond/:id",function(req, res, next){
+    var id = req.params.id;
+    webs.findById(id, function (err, item) {
+        item.recommond=!item.recommond;
+        item.save(function (err, saveitem) {
+            res.json(saveitem);
+        })
+    });
 })
 
 router.get("/item/:id", auth, function (req, res, next) {
@@ -61,7 +78,6 @@ router.post("/edit", auth, function (req, res, next) {
         saveitem.content = content;
         saveitem.cover =cover;
         saveitem.save(function (err, saveitem) {
-            console.log(saveitem);
             res.json(saveitem);
         })
     })
