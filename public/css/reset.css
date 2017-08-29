@@ -249,13 +249,6 @@ header a {
   border: 1px solid #949599;
   color: #fff;
   cursor: pointer;
-    /* -webkit-box-shadow: 1px 1px 2px #F5F5F5;
-	   -moz-box-shadow: 1px 1px 2px #F5F5F5;
-	        box-shadow: 1px 1px 2px #F5F5F5;
-	-webkit-transition: all .2s ease;
-	   -moz-transition: all .2s ease;
-	     -o-transition: all .2s ease;
-	        transition: all .2s ease; */
 }
 
 .button:hover {
