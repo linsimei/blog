@@ -23,7 +23,8 @@
     <div class="container">
         <div class="create">
             <h3>修改博客</h3>
-            <form id="create_form" action="/web/add" method="post">
+            <form id="create_form" method="post">
+                <input type="hidden" name="id" id="id">
                 <div class="upload_cover">
                     <span>博客封面：</span>
                     <i class="img_wrapper"><img id="pre_img" src="/images/cover_upload.png" alt="上传封面"></i>

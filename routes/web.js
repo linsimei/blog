@@ -56,7 +56,7 @@ router.post("/edit", auth, function (req, res, next) {
     var content = req.body.content;
     var cover = req.body.cover;
 
-    webs.findOne({ _id: id }, function (err, saveitem) {
+    webs.findById(id, function (err, saveitem) {
         saveitem.title = title;
         saveitem.content = content;
         saveitem.cover =cover;
