@@ -7,6 +7,8 @@ $(function () {
         $(".content_title").html(data.title);
         $(".sumit_time").html(data.createDate);
         $(".blogs_content").html(data.content);
+        $(".blogs_content").html(data.content);
+        $(".views_num").html(data.visit);
         
       
 

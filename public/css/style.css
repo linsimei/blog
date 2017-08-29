@@ -281,7 +281,6 @@ header nav li a.current {
 
 .main_wrapper .manage {
   padding: 10px;
- 
 }
 
 .manage .button {
@@ -290,7 +289,6 @@ header nav li a.current {
   background: #949599;
   color: #fff;
   text-align: center;
-  
 }
 
 .manage .button:hover {
@@ -313,16 +311,19 @@ header nav li a.current {
   padding-top: 15px;
   margin-bottom: 15px;
 }
+
 .manage .list_manage .manage_blog:last-of-type {
   border-bottom: 2px solid #e0e0e0;
 }
-.manage .manage_cover{
+
+.manage .manage_cover {
   height: 144px;
   width: 200px;
   overflow: hidden;
   margin-right: 30px;
 }
-.manage .list_manage #manage_wrapper .manage_right{
+
+.manage .list_manage #manage_wrapper .manage_right {
   position: relative;
   width: 270px;
   min-height: 144px;
@@ -334,21 +335,23 @@ header nav li a.current {
   border-radius: 5px;
   font-size: 20px;
   color: #000;
-  
 }
-.manage .list_manage .manage_items{
+
+.manage .list_manage .manage_items {
   position: absolute;
-  right:0;
+  right: 0;
   bottom: 10px;
 }
- .manage_items a{
+
+.manage_items a {
   margin-right: 8px;
   border-radius: 5px;
   cursor: pointer;
   background: #e0e0e0;
   padding: 5px;
 }
-.manage_items a:hover{
+
+.manage_items a:hover {
   background: #000;
 }
 
@@ -413,10 +416,43 @@ header nav li a.current {
   background: #000;
   border: 1px solid #000;
 }
+
+
 /*blog content*/
-#content_wrraper{
+
+#content_wrraper {
   width: 100%;
   border: 2px solid #949599;
   background: #fff;
   border-radius: 10px;
+  padding: 60px;
+}
+
+#content_wrraper .content_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#content_wrraper .content_infos {
+  width: 100%;
+  text-align: center;
+  border-top: 1px dotted #949599;
+  border-bottom: 1px dotted #949599;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+.time_icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  background: url(../images/time.png) no-repeat;
+}
+#content_wrraper .content_infos .content_views{
+  margin-left: 50px;
+}
+#content_wrraper .blogs_content{
+  text-align: left;
+}
+ .blogs_content p  .blogs_content,[att^=h]{
+  text-indent: 2em;
 }
