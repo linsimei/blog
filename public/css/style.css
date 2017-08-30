@@ -161,29 +161,31 @@ header nav li a.current {
   color: #949599;
 }
 
-.comments a:hover,
+/* .comments a:hover,
 .comments a:focus {
   color: #000;
   background: #fff;
-}
+} */
 
 .blog_info i {
-  height: 15px;
+  height: 16px;
   width: 20px;
   margin-left: 15px;
 }
 
-.blog_info .comments i {
-  background: url(../images/comments.png) no-repeat;
-  vertical-align: bottom;
+.blog_info .views i {
+  background: url(../images/view.png) no-repeat;
+ 
+  
 }
 
-.blog_info .comments span {
+.blog_info .views span {
   margin-right: 2px;
 }
 
 .blog_info .submit_time i {
   background: url(../images/time.png) no-repeat;
+ 
 }
 
 .blog_info .more {
@@ -357,7 +359,6 @@ header nav li a.current {
 
 
 /*blog create &edit*/
-
 .create {
   width: 1000px;
   margin: 100px auto;
@@ -449,6 +450,12 @@ header nav li a.current {
 }
 #content_wrraper .content_infos .content_views{
   margin-left: 50px;
+}
+.view_icon{
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  background: url(../images/view.png) no-repeat;
 }
 #content_wrraper .blogs_content{
   text-align: left;
