@@ -152,18 +152,22 @@ header nav li a.current {
   line-clamp: 6;
   overflow: hidden;
 }
-.blog_info div{
+
+.blog_info div {
   margin-left: 10px;
-  }
+}
+
 .blog_info i {
   height: 15px;
   width: 20px;
   margin-top: 10px;
   margin-left: 10px;
 }
+
 .blog_info a {
   color: #949599;
 }
+
 
 /* .comments a:hover,
 .comments a:focus {
@@ -171,14 +175,9 @@ header nav li a.current {
   background: #fff;
 } */
 
-
-
-
 .blog_info .views i {
   background: url(../images/view.png) no-repeat;
   vertical-align: -2px;
- 
-  
 }
 
 .blog_info .views span {
@@ -187,7 +186,6 @@ header nav li a.current {
 
 .blog_info .submit_time i {
   background: url(../images/time.png) no-repeat;
- 
 }
 
 .blog_info .more {
@@ -268,9 +266,9 @@ header nav li a.current {
   text-align: center;
 }
 
-.footer .back_top  {
+.footer .back_top {
   position: fixed;
-   z-index: 999; 
+  z-index: 999;
   display: inline-block;
   display: none;
   cursor: pointer;
@@ -363,6 +361,7 @@ header nav li a.current {
 
 
 /*blog create &edit*/
+
 .create {
   width: 1000px;
   margin: 100px auto;
@@ -446,24 +445,53 @@ header nav li a.current {
   padding: 5px;
   margin-bottom: 50px;
 }
+
 .time_icon {
   width: 16px;
   height: 16px;
   margin-right: 2px;
   background: url(../images/time.png) no-repeat;
 }
-#content_wrraper .content_infos .content_views{
+
+#content_wrraper .content_infos .content_views {
   margin-left: 50px;
 }
-.view_icon{
+
+.view_icon {
   width: 16px;
   height: 16px;
   margin-right: 2px;
   background: url(../images/view.png) no-repeat;
 }
-#content_wrraper .blogs_content{
+
+#content_wrraper .blogs_content {
   text-align: left;
 }
- .blogs_content p  .blogs_content,[att^=h]{
+
+.blogs_content p .blogs_content,
+[att^=h] {
   text-indent: 2em;
+}
+
+
+/*about*/
+
+#about {
+  width: 1000px;
+  margin: 0 auto;
+  padding:80px 200px;
+  line-height: 2;
+  font-size: 16px;
+  border: 2px solid #949599;
+  border-radius: 10px;
+  background: #fff;
+ 
+}
+#about i {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+#about .about_contact{
+  margin-top: 30px;
 }
