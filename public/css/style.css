@@ -227,7 +227,7 @@ header nav li a.current {
   font-size: 18px;
 }
 
-.aside .recomend_blogs {
+.aside .recommend,.aside .hot {
   width: 100%;
   margin: 20px auto;
   min-height: 300px;

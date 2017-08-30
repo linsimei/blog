@@ -27,7 +27,6 @@ router.get("/recommend/:id",auth,function(req, res, next){
     webs.findById(id, function (err, item) {
         item.recommend=!item.recommend;
         item.save(function (err, saveitem) {
-            console.log(saveitem.recommend);
             res.redirect("/manage");
         })
     });
