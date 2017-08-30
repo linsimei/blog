@@ -22,12 +22,13 @@ router.get("/details",function(req, res, next){
     });
 })
 
-router.get("/recommond/:id",function(req, res, next){
+router.get("/recommend/:id",auth,function(req, res, next){
     var id = req.params.id;
     webs.findById(id, function (err, item) {
-        item.recommond=!item.recommond;
+        item.recommend=!item.recommend;
         item.save(function (err, saveitem) {
-            res.json(saveitem);
+            console.log(saveitem.recommend);
+            res.redirect("/manage");
         })
     });
 })
@@ -38,8 +39,8 @@ router.get("/visit_top10",function(req, res, next){
     }) 
 })
 
-router.get("/recommond_top10",function(req, res, next){
-    webs.find({recommond:true}).sort({visit:-1}).limit(10).select("_id title").exec((err, items)=>{
+router.get("/recommend_top10",function(req, res, next){
+    webs.find({recommend:true}).sort({visit:-1}).limit(10).select("_id title").exec((err, items)=>{
         res.json(items);
     }) 
 })
