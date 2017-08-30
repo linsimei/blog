@@ -32,6 +32,19 @@ router.get("/recommond/:id",function(req, res, next){
     });
 })
 
+router.get("/visit_top10",function(req, res, next){
+    webs.find().sort({visit:-1}).limit(10).select("_id title").exec((err, items)=>{
+        res.json(items);
+    }) 
+})
+
+router.get("/recommond_top10",function(req, res, next){
+    webs.find({recommond:true}).sort({visit:-1}).limit(10).select("_id title").exec((err, items)=>{
+        res.json(items);
+    }) 
+})
+
+
 router.get("/item/:id", function (req, res, next) {
     var id = req.params.id;
     webs.findById(id, function (err, item) {

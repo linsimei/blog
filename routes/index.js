@@ -40,5 +40,4 @@ router.get('/manage',auth, function (req, res) {
   res.redirect('/html/manage.html');
 });
 
-
 module.exports = router;
