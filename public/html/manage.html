@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=yes" />
@@ -14,8 +14,7 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/manage.js"></script>
-    <script src="/js/header.js"></script>
-    <script src="/js/footer.js"></script>
+
 </head>
 
 <body>
@@ -26,9 +25,9 @@
             </div>
             <nav class="head_left float_right">
                 <ul>
-                    <li><a class="current" href="/">首页</a></li>
-                    <li><a href="/manage">博客管理</a></li>
-                    <li><a href="#">关于我</a></li>
+                    <li><a class="nav_item" href="/">首页</a></li>
+                    <li><a class="nav_item current" href="/manage">博客管理</a></li>
+                    <li><a class="nav_item"href="/html/about.html">关于我</a></li>
                 </ul>
             </nav>
         </header>
@@ -54,7 +53,7 @@
         </div>
         <div class="footer">
             <p>Copyright©linsimei All Right Reserved</p>
-            <div class="back_top"><a href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
+            <div><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
         </div>
     </div>
 </body>
