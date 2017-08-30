@@ -246,8 +246,15 @@ header nav li a.current {
   text-align: left;
   line-height: 2;
   margin-left: 50px;
+  padding-left: 32px;
+  
 }
-
+.recommend .recommend_blogs li{
+  background: url(../images/recommend_blog.png) no-repeat ;
+}
+.hot .hot_blogs li{
+  background: url(../images/hot_blog.png) no-repeat  0 -5px;
+}
 .aside ol li a {
   color: #949599;
   padding: 5px;
