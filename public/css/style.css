@@ -152,11 +152,15 @@ header nav li a.current {
   line-clamp: 6;
   overflow: hidden;
 }
-
+.blog_info div{
+  margin-left: 10px;
+  }
 .blog_info i {
+  height: 15px;
+  width: 20px;
   margin-top: 10px;
+  margin-left: 10px;
 }
-
 .blog_info a {
   color: #949599;
 }
@@ -167,14 +171,12 @@ header nav li a.current {
   background: #fff;
 } */
 
-.blog_info i {
-  height: 16px;
-  width: 20px;
-  margin-left: 15px;
-}
+
+
 
 .blog_info .views i {
   background: url(../images/view.png) no-repeat;
+  vertical-align: -2px;
  
   
 }
@@ -266,9 +268,11 @@ header nav li a.current {
   text-align: center;
 }
 
-.footer .back_top a {
-  display: inline-block;
+.footer .back_top  {
   position: fixed;
+   z-index: 999; 
+  display: inline-block;
+  display: none;
   cursor: pointer;
   bottom: 30px;
   left: 50%;
