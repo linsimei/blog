@@ -136,8 +136,8 @@ header nav li a.current {
 .blog .blog_right .blog_content {
   text-align: left;
   margin-bottom: 10px;
-  text-indent: 2em;
-  line-height: 1.6;
+  /* text-indent: 2em;
+  line-height: 1.6; */
   font-size: 14px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -471,13 +471,17 @@ header nav li a.current {
   background: url(../images/view.png) no-repeat;
 }
 
-#content_wrraper .blogs_content {
+#content_wrraper  .blogs_content p {
   text-align: left;
+   text-indent: 2em;
+  line-height: 1.6;
 }
 
-.blogs_content p .blogs_content,
+ .blogs_content
 [att^=h] {
-  text-indent: 2em;
+
+  color: #000;
+  font-weight: 700;
 }
 
 
