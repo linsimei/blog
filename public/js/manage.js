@@ -6,7 +6,7 @@ $(function () {
             html += '<div class="manage_blog clearfix"> '
             +'<div class="manage_cover float_left"><img src="'+item.cover+'" alt="博客封面"/></div>'
             +'<div class="manage_right float_left">'
-            +'<div class="manage_title"><a href="">' + item.title + '</a></div>'
+            +'<div class="manage_title"><a href="/web/edit/' + item._id + '">' + item.title + '</a></div>'
             +'<div class="manage_items">'
             +'<a class="content" href="/web/details?id='+item._id+'">查看</a>'
             +'<a class="edit" href="/web/edit/' + item._id + '">修改</a>'
