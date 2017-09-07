@@ -11,7 +11,7 @@ $(function () {
             +'<a class="content" href="/web/details?id='+item._id+'">查看</a>'
             +'<a class="edit" href="/web/edit/' + item._id + '">修改</a>'
             +'<a class="delete" href="/web/delete/' + item._id + '">删除</a>'
-            + '<a class="recommend" href="/web/recommend/' + item._id + '">'+(item.recommend?'已推荐':'推荐') +'</a>'
+            + '<a class="recommend" href="/web/recommend/' + item._id + '">'+(item.recommend?'取消推荐':'推荐') +'</a>'
             +'</div></div></div>';
         }, this);
         $('#manage_wrapper').html(html);

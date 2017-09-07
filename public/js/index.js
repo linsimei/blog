@@ -3,7 +3,7 @@ $(function () {
     $.get("/web", function (data) {
         var html = "";
         data.forEach(function (item) {
-            var blog_content=$(item.content).children().slice(0,4);
+            var blog_content=$("<div></div>").append($('<div>'+item.content+'</div>').children().slice(0,2)).html();
             html += '<div class="blog_wrapper"><div class="blog clearfix"><i class="float_left"><img src="' + item.cover + '" alt="文章插图"></i><div class="blog_right float_left"> <h2 class="blog_title"><a href="/web/details?id=' + item._id + '">' + item.title + '</a></h2><div class="blog_content">' + blog_content + '</div></div> </div> <div class="blog_info clearfix"><div class="submit_time inline"><i></i><span>' + new Date(item.createDate).format('yyyy-MM-dd') + '</span></div><div class="views inline"><i></i><span>浏览量</span><span class="views_num">（' + item.visit + '）</span></div> <a class="more float_right" href="/web/details?id=' + item._id + '">Read More</a></div></div >'
         }, this);
         $('.blogs_list').html(html);

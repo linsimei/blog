@@ -22,6 +22,18 @@
 
 <body>
     <div class="container ">
+        <header class="clearfix" id="header_top">
+            <div class="head_right float_left">
+                <i class="logo"><img src="/images/Blogo.png" alt="logo"></i>
+            </div>
+            <nav class="head_left float_right">
+                <ul>
+                        <li><a class="nav_item" href="/">首页</a></li>
+                        <li><a class="nav_item current" href="/manage">博客管理</a></li>
+                        <li><a class="nav_item" href="/html/about.html">关于我</a></li>
+                </ul>
+            </nav>
+        </header>
         <div class="create">
             <h3>发表博客</h3>
             <form id="create_form" action="/web/add" method="post">
@@ -30,7 +42,7 @@
                     <i class="img_wrapper"><img id="pre_img" src="/images/cover_upload.png" alt="上传封面"></i>
                     <!-- 选择文件改变值的时候上传 -->
                     <input id="upload_file" name="cover" type="file" placeholder="文章封面" style="visibility:hidden" />
-                    <!-- 选择文件改变值的时候上传 -->
+                    <!-- 保存文件 -->
                     <input type="hidden" name="cover" id="cover">
                 </div>
                 <input type="text" name="title" placeholder="标题" style="display:block" />
@@ -39,6 +51,10 @@
 
                 <input type="button" id="submit" value="发表" />
             </form>
+        </div>
+        <div class="footer">
+            <p>Copyright©linsimei All Right Reserved</p>
+            <div class="back_top"><a href="#header_top"><img src="/images/top.png" alt="back_top"></a></div>
         </div>
     </div>
 </body>
