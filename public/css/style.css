@@ -518,9 +518,9 @@ header nav li a.current {
 /*about*/
 
 #about {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
-  padding: 50px 160px;
+  padding: 50px 100px;
   line-height: 2;
   font-size: 16px;
   border: 2px solid #949599;
@@ -537,9 +537,18 @@ header nav li a.current {
 #about i {
   width: 200px;
   height: 200px;
+  border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 50px;
+  border: 1px solid #949599;
 }
-
+.about_content{
+  padding-right: 60px;
+ 
+  /* border-right: 2px dotted #949599; */
+}
 #about .about_contact {
-  margin-top: 30px;
+  margin-top: 50px;
+  
+  
 }
