@@ -1,5 +1,12 @@
 /*PAGE STRUCTURE
 ----------------------------------------------- */
+.container {
+  position: relative;
+  width: 1350px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
 
 header {
   width: 100%;
@@ -55,8 +62,6 @@ header {
 
 
 /*home page*/
-
-
 /*header*/
 
 header {
@@ -73,14 +78,12 @@ header h1 {
 
 header nav li {
   display: inline-block;
-  border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 header nav li a {
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 5px;
-  margin-right: 10px;
   font-weight: 700;
   font-size: 20px;
 }
@@ -109,7 +112,8 @@ header nav li a.current {
   height: 90px;
   line-height: 90px;
   text-align: center;
-  font-size: 18px;
+  font-size: 28px;
+  color: #333;
   border-bottom: 2px solid #e0e0e0;
   /* background: #ece8e8; */
 }
@@ -126,7 +130,7 @@ header nav li a.current {
   height: 180px;
   width: 250px;
   overflow: hidden;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .blog .blog_right {
@@ -137,18 +141,17 @@ header nav li a.current {
 
 .blog .blog_right .blog_title {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .blog .blog_right .blog_content {
   text-align: left;
   margin-bottom: 10px;
-  /* text-indent: 2em;
-  line-height: 1.6; */
   font-size: 14px;
+  line-height: 1.6;
   white-space: pre-wrap;
   word-wrap: break-word;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -moz-box;
   display: box;
   -webkit-box-orient: vertical;
@@ -156,7 +159,7 @@ header nav li a.current {
   box-orient: vertical;
   -webkit-line-clamp: 4;
   -moz-line-clamp: 4;
-  line-clamp: 4;
+  line-clamp: 4; */
   overflow: hidden;
 }
 
@@ -165,14 +168,13 @@ header nav li a.current {
 }
 
 .blog_info div {
-  margin-left: 10px;
+ margin-top: 5px;
+margin-left: 15px;
 }
 
 .blog_info i {
   height: 15px;
   width: 20px;
-  margin-top: 10px;
-  margin-left: 10px;
 }
 
 
@@ -192,17 +194,12 @@ header nav li a.current {
   margin-top: 2px;
 }
 
-.blog_info .views span {
-  margin-right: 1px;
-}
-
 .blog_info .submit_time i {
   background: url(../images/time.png) no-repeat;
 }
 
 .blog_info .more {
   margin-right: 30px;
-  margin-top: 10px;
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
@@ -244,7 +241,7 @@ header nav li a.current {
 .aside .recommend,
 .aside .hot {
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
   min-height: 300px;
 }
 
@@ -254,7 +251,7 @@ header nav li a.current {
 }
 
 .aside ol {
-  margin-top: 20px;
+  margin-bottom: 80px;
 }
 
 .aside ol li {
@@ -285,6 +282,7 @@ header nav li a.current {
   color: #fff;
 }
 
+/*footer*/
 .footer {
   width: 1350px;
   margin: 50px auto;

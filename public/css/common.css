@@ -13,13 +13,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-.container {
-    position: relative;
-    width: 1350px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 15px;
-}
 
 h1 {
     font-size: 2em;
