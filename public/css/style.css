@@ -305,7 +305,9 @@ margin-left: 15px;
 
 
 /* blog manage*/
-
+.main_wrapper h2 {
+  font-size: 28px;
+}
 .main_wrapper .manage {
   padding: 30px;
 }
