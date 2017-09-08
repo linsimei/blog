@@ -1,3 +1,4 @@
+@media only screen and (min-width: 1000px) {
 /*PAGE STRUCTURE
 ----------------------------------------------- */
 .container {
@@ -10,6 +11,7 @@
 
 header {
   width: 100%;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -64,18 +66,17 @@ header {
 /*home page*/
 /*header*/
 
-header {
-  width: 100%;
-  margin: 0 auto;
-}
 
 header h1 {
   text-indent: -9999px;
   background: url("../images/Blogo.png") no-repeat;
   width: 150px;
   height: 40px;
+  float: left;
 }
-
+header nav {
+  float: right;
+}
 header nav li {
   display: inline-block;
   margin-right: 20px;
@@ -120,6 +121,7 @@ header nav li a.current {
 
 .blogs_list {
   width: 70%;
+  float:left;
 }
 
 .blog_wrapper {
@@ -219,6 +221,7 @@ margin-left: 15px;
 .aside {
   width: 26%;
   text-align: center;
+  float:right;
 }
 
 .aside .info_about {
@@ -504,6 +507,11 @@ margin-left: 15px;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
+.blogs_content pre{
+  word-break: keep-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
 
 #content_wrapper a {
   text-decoration: underline;
@@ -543,12 +551,13 @@ margin-left: 15px;
   border: 1px solid #949599;
 }
 .about_content{
+  float:left;
   padding-right: 60px;
  
   /* border-right: 2px dotted #949599; */
 }
 #about .about_contact {
+  float:right;
   margin-top: 50px;
-  
-  
+}
 }

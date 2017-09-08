@@ -33,7 +33,14 @@ $(function(){
 
     //wangEditor
     var E = window.wangEditor;
-    var editor = new E('#wangeditor')
+    var editor = new E('#wangeditor');
+    // 自定义菜单配置
+    editor.customConfig.menus = [
+        'head',
+        'bold',
+        'italic',
+        'underline'
+    ]
     editor.customConfig.onchange = function (html) {
         // html 即变化之后的内容
         $("#content").val(html);

@@ -48,7 +48,27 @@ $(function () {
 
         //wangEditor
         var E = window.wangEditor;
-        var editor = new E('#wangeditor')
+        var editor = new E('#wangeditor');
+        // 自定义菜单配置
+    editor.customConfig.menus = [
+        'head',
+        'bold',
+       // 'italic',
+        'underline',
+        //'foreColor',  // 文字颜色
+        //'backColor',  // 背景颜色
+        'link',  // 插入链接
+       // 'list',  // 列表
+        //'justify',  // 对齐方式
+        //'quote',  // 引用
+        //'emoticon',  // 表情
+        'image',  // 插入图片
+        'table',  // 表格
+        //'video',  // 插入视频
+        'code',  // 插入代码
+        //'undo',  // 撤销
+        //'redo'  // 重复
+    ]
         editor.customConfig.onchange = function (html) {
             // html 即变化之后的内容
             $("#content").val(html);
