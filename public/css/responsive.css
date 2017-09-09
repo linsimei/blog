@@ -624,14 +624,17 @@
   
   }
   .about_content{
+    
     margin-top: 1rem;
     
     /* border-right: 2px dotted #949599; */
   }
   #about .about_contact {
     margin-top: .5rem;
-    
-    
+    font-size: 14px;
+  }
+  #about .about_contact span{
+    margin-right: .1rem;
   }
   
  }

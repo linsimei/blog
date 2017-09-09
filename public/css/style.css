@@ -560,4 +560,7 @@ margin-left: 15px;
   float:right;
   margin-top: 50px;
 }
+#about .about_contact span{
+  margin-right: 10px;
+}
 }
