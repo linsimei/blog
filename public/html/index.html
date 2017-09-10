@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
+    <script src="/js/vue/vue.js"></script>
+    <script src="/js/vue/vue-resource.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/index.js"></script>
@@ -39,11 +41,11 @@
             <section class="banner">
                 <p>WELECOME TO MY BLOG</p>
             </section>
-            <div class="mainbody clearfix">
-                <section class="blogs_list">
-                    <!-- <div class="blog_wrapper">
+            <div class="mainbody clearfix" id="mainbody">
+                <section class="blogs_list" v-for="blog in blogs">
+                    <div class="blog_wrapper">
                         <div class="blog clearfix">
-                            <i class="float_left"><img src="../images/cover01.jpg" alt="文章插图"></i>
+                            <i class="float_left"><img :src="blog.cover" alt="文章插图" /></i>
                             <div class="blog_right float_left;">
                                 <h2 class="blog_title"><a href=""></a></h2>
                                 <div class="blog_content"></div>
@@ -55,7 +57,7 @@
 
                             <a class="more active float_right" href="">Read More</a>
                         </div>
-                    </div> -->
+                    </div>
                 </section>
 
                 <section class="aside ">
