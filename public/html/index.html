@@ -42,50 +42,54 @@
                 <p>WELECOME TO MY BLOG</p>
             </section>
             <div class="mainbody clearfix" id="mainbody">
-                <section class="blogs_list" v-for="blog in blogs">
-                    <div class="blog_wrapper">
-                        <div class="blog clearfix">
-                            <i class="float_left"><img :src="blog.cover" alt="文章插图" /></i>
-                            <div class="blog_right float_left;">
-                                <h2 class="blog_title"><a href=""></a></h2>
-                                <div class="blog_content"></div>
+                <section class="blogs_list">
+                    <div v-for="blog in blogs">
+                        <div class="blog_wrapper">
+                            <div class="blog clearfix">
+                                <i class="float_left"><img :src="blog.cover" alt="文章插图" /></i>
+                                <div class="blog_right float_left;">
+                                    <h2 class="blog_title"><a v-bind:href="'/web/details?id='+blog._id">{{blog.title}}</a></h2>
+                                    <div class="blog_content" v-html="get_content(blog)"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="blog_info clearfix">
-                            <div class="submit_time inline"><i></i><span>2017-08-26</span></div>
-                            <div class="comments inline"><a href=""><i></i><span class="comments_num">2</span><span>comments</span></a></div>
+                            <div class="blog_info clearfix">
+                                <div class="submit_time inline"><i></i><span>{{new Date(blog.createDate).format('yyyy-MM-dd')}}</span></div>
+                                <div class="views inline"><i></i><span>浏览量</span><span class="views_num">（{{blog.visit}}）</span></div>
+                                <a class="more float_right" v-bind:href="'/web/details?id='+ blog._id">Read More</a>
+                            </div>
 
-                            <a class="more active float_right" href="">Read More</a>
                         </div>
                     </div>
+
                 </section>
 
-                <section class="aside ">
+                <section class="aside">
                     <div class="info_about">
                         <i class="avatar"><img src="../images/avatar01.jpg" alt="头像"></i>
                         <p class="Motto">愿你走出半生，归来仍是少年</p>
                     </div>
-                    <div class="recommend">
+                    <div class="recommend" id="blog_recommend">
                         <h2>推荐文章</h2>
                         <ol class="recommend_blogs">
-                            <!-- <li><a href="#"></a></li> -->
+                            <li v-for="item in recommend_blogs"><a href="#">{{item.title}}</a></li>
                         </ol>
+
 
                     </div>
                     <div class="hot">
                         <h2>阅读排行</h2>
                         <ol class="hot_blogs">
-                            <!-- <li><a href="#"></a></li> -->
+                            <li v-for="item in hot_blogs"><a href="#">{{item.title}}</a></li>
                         </ol>
                     </div>
                 </section>
             </div>
+
+            <div class="footer">
+                <p>Copyright©linsimei All Right Reserved</p>
+                <div><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
+            </div>
         </div>
-        <div class="footer">
-            <p>Copyright©linsimei All Right Reserved</p>
-            <div ><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
-        </div>
-    </div>
 </body>
 
 </html>
