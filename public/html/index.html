@@ -71,7 +71,7 @@
                     <div class="recommend" id="blog_recommend">
                         <h2>推荐文章</h2>
                         <ol class="recommend_blogs">
-                            <li v-for="item in recommend_blogs"><a href="#">{{item.title}}</a></li>
+                            <li v-for="item in recommend_blogs"><a v-bind:href="'/web/details?id='+ item._id">{{item.title}}</a></li>
                         </ol>
 
 
@@ -79,17 +79,17 @@
                     <div class="hot">
                         <h2>阅读排行</h2>
                         <ol class="hot_blogs">
-                            <li v-for="item in hot_blogs"><a href="#">{{item.title}}</a></li>
+                            <li v-for="item in hot_blogs"><a v-bind:href="'/web/details?id='+ item._id">{{item.title}}</a></li>
                         </ol>
                     </div>
                 </section>
             </div>
-
-            <div class="footer">
-                <p>Copyright©linsimei All Right Reserved</p>
-                <div><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
-            </div>
         </div>
+        <div class="footer">
+            <p>Copyright©linsimei All Right Reserved</p>
+            <div><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="format-detection" content="telephone=yes" />
@@ -14,9 +15,10 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
     <script src="/js/vue/vue.js"></script>
+    <script src="/js/vue/vue-resource.js"></script>
     <script src="/js/jquery.min.js"></script>
-    <!-- <script src="/js/common.js"></script>
-    <script src="/js/manage.js"></script> -->
+    <!-- <script src="/js/common.js"></script>-->
+    <script src="/js/manage.js"></script>
 
 </head>
 
@@ -24,9 +26,9 @@
     <div class="container">
         <header class="clearfix" id="header_top">
             <div class="head_left">
-                    <h1 class="logo">
-                            <!-- <i class="logo"><img src="../images/Blogo.png" alt="logo"></i> -->
-                        </h1>
+                <h1 class="logo">
+                    <!-- <i class="logo"><img src="../images/Blogo.png" alt="logo"></i> -->
+                </h1>
             </div>
             <nav class="head_right">
                 <ul>
@@ -45,20 +47,28 @@
                 <section class="list_manage">
                     <h3>博客列表管理</h3>
                     <div id="manage_wrapper">
-                    <!-- <div class="manage_blog clearfix">
-                        <div class="manage_cover float_left"><img src="" alt="博客封面"/></div>
-                        <div class="manage_right float_left>
-                        <div class="manage_title"><a href="">标题</a></div>
-                        <div class="manage_items float_right"><a class="content" href="#">查看</a><a class="edit" href="#">修改</a> <a class="delete" href="#">删除</a></div>
+                        <div class="manage_blog clearfix" v-for="item in manage_blogs">
+                            <div class="manage_cover float_left"><img :src="item.cover" alt="博客封面" />
+                            </div>
+                            <div class="manage_right float_left">
+                                <div class=" manage_title "><a v-bind:href="'/web/details?id='+item._id">{{item.title}}</a>
+                                </div>
+                                <div class="manage_items float_right">
+                                    <a class="content" v-bind:href="'/web/details?id='+item._id">查看</a>
+                                    <a class="edit" v-bind:href="'/web/edit/'+ item._id">修改</a>
+                                    <a class="delete" v-bind:href="'/web/delete/'+ item._id" onclick="return confirm('确认删除？')">删除</a>
+                                    <a class="recommend" id="recommend" v-bind:href="'/web/recommend/' + item._id">{{item.recommend?'取消推荐':'推荐'}}</a>
+                                </div>
+                            </div>
                         </div>
-                    </div> -->
-                </div>
+
+                    </div>
                 </section>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer ">
             <p>Copyright©linsimei All Right Reserved</p>
-            <div><a class="back_top" href="#header_top"><img src="../images/top.png" alt="back_top"></a></div>
+            <div><a class="back_top " href="#header_top "><img src="../images/top.png " alt="back_top "></a></div>
         </div>
     </div>
 </body>
