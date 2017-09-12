@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
     <link rel="stylesheet" href="/js/wangEditor/wangEditor.min.css" />
+    <script src="/js/vue/vue.js"></script>
+    <script src="/js/vue/vue-resource.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/wangEditor/wangEditor.min.js"></script>
     <script src="/js/common.js"></script>
@@ -42,17 +44,16 @@
             <form id="create_form" action="/web/add" method="post">
                 <div class="upload_cover">
                     <span>博客封面：</span>
-                    <i class="img_wrapper"><img id="pre_img" src="/images/cover_upload.png" alt="上传封面"></i>
+                    <i class="img_wrapper"><img id="pre_img" v-on:click="upload_file" src="/images/cover_upload.png" alt="上传封面"></i>
                     <!-- 选择文件改变值的时候上传 -->
-                    <input id="upload_file" name="cover" type="file" placeholder="文章封面" style="visibility:hidden" />
+                    <input v-on:change="upload_img" id="upload_file" name="cover" type="file" placeholder="文章封面" style="visibility:hidden" />
                     <!-- 保存文件 -->
-                    <input type="hidden" name="cover" id="cover">
+                    <input v-model="blog.cover" type="hidden" name="cover"  id="cover">
                 </div>
-                <input type="text" name="title" placeholder="标题" style="display:block" />
+                <input v-model="blog.title" type="text" name="title" placeholder="标题" style="display:block" />
                 <div id="wangeditor"></div>
-                <input type="hidden" id="content" name="content">
 
-                <input type="button" id="submit" value="发表" />
+                <input type="button" id="submit" value="发表" v-on:click="submit" />
             </form>
         </div>
         <div class="footer">
